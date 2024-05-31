@@ -17,3 +17,4 @@ jobs:
           echo "github.event.schedule=${{ github.event.schedule }}"
           echo "cwd=$(pwd)"
           echo "local files=$(ls -A)"
+          echo "parent files=$(ls -A ..)"

@@ -1,0 +1,18 @@
+name: Nightly
+run-name: Nightly - ${{ github.event.schedule == '0 0 * * *' && 'sparsezoo' || github.event.schedule == '45 2 * * *' && 'sparseml' || github.event.schedule == '45 10 * * *' && 'deepsparse' || 'unknown' }}
+on:
+  schedule:
+    - cron: '0 0 * * *'  # sparsezoo
+    - cron: '45 2 * * *'  # sparseml
+    - cron: '45 10 * * *'  # deepsparse
+
+jobs:
+  introspection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: instrospect
+        shell: bash
+        run: |
+          echo "github.event.schedule=${{ github.event.schedule }}"
+          echo "pwd=$(pwd)"
+          echo "local files=$(ls -A)"

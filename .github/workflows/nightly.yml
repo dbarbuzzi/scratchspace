@@ -5,6 +5,7 @@ on:
     - cron: '0 0 * * *'  # sparsezoo
     - cron: '45 2 * * *'  # sparseml
     - cron: '45 10 * * *'  # deepsparse
+  workflow_dispatch:
 
 jobs:
   introspection:

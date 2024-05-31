@@ -15,5 +15,5 @@ jobs:
         shell: bash
         run: |
           echo "github.event.schedule=${{ github.event.schedule }}"
-          echo "pwd=$(pwd)"
+          echo "cwd=$(pwd)"
           echo "local files=$(ls -A)"

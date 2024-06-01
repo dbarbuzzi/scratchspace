@@ -1,6 +1,6 @@
 name: Nightly
 run-name: Nightly - ${{ github.event.schedule == '0 0 * * *' && 'sparsezoo' || github.event.schedule == '45 2 * * *' && 'sparseml' || github.event.schedule == '45 10 * * *' && 'deepsparse' || 'unknown' }}
-# on:
+on:
 #   schedule:
 #     - cron: '0 0 * * *'  # sparsezoo
 #     - cron: '45 2 * * *'  # sparseml
